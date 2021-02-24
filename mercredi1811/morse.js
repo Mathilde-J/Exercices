@@ -1,41 +1,3 @@
-// const morseTable = {
-//   "..." : "s",
-//   "---" : "o"
-//  }
-//  function afficherValeur(valeurRecue,index,tab){
-//    console.log("valeur Recue = "+ valeurRecue);
-//    console.log("index Recue = "+ index);
-//    console.log("tab Recue = "+ tab);
-   
-//  }
-
-
-// function decoder(chaineMorse){
-//    arrayOfChaineMorse = chaineMorse.split(" ");
-//     arrayOfChaineMorse.forEach(afficherValeur);
-//     //arrayOfChaineMorse.forEach(function (morseLetter){
-//      //   console.log(morseLetter);
-// //      if (morseLetter === "...") {
-// //      console.log("s");
-// //  }if(morseLetter === "---"){
-// //      console.log("o");
-// //      }
-//  //   });
-// }
-
-// console.log(decoder("... --- ... ---"));
-
-
-// ----------------------------NIVEAU 2 MOI----------------
-
-// var person = {
-//   firstName: "John",
-//   lastName: "Doe",
-//   age: 50,
-//   eyeColor: "blue"
-// };
-// console.log(person["firstName"]);
-
 let morse = {
   ".-" : "a",                        
   "-..." : "b",                       
@@ -75,20 +37,18 @@ let morse = {
   "-----" :"0"
 }
 
-console.log(morse["..."])  
+// console.log(morse["..."])  
 
-console.log(typeof morse)
+// console.log(Object.keys(morse));
 
-
-
-function MorseDecode(Codeenmorse){
-  console.log("je suis là")
-  let code = Codeenmorse.split("");
-
-  
-  return code;
-}
-
-
-let resultat = console.log(MorseDecode("..."))
-
+let trad = "";
+function decoder(codeMorse){
+  let inputSplit = codeMorse.split(" ");
+  // console.log(inputSplit, typeof inputSplit);
+  inputSplit.forEach(element => {
+    trad += morse[element];
+    // console.log(trad);
+  });
+  return trad;
+};
+let result = console.log(decoder("-.-. --- ..- -.-. --- ..-"));
