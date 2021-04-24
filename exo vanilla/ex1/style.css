@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+body{
+    background: hsl(34, 17%, 43%);
+}
+
+.keys{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+span{
+    font-size: 1rem;
+}
+
+.key{
+    position: relative;
+    border: 1px solid hsla(36, 54%, 73%, 0.5);
+    background: hsla(36, 54%, 73%);
+    font-size: 2rem;
+    padding: 1rem 1.6rem;
+    margin: 0 .4rem;
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* //creation du style animation */
+
+.playing{
+    transition: all 0.3s ;
+    transform: scale(1.1);
+    border-color: hsl(27, 38%, 73%);
+    box-shadow: 0 0 30px hsl(24, 25%, 62%);
+}
+
+/* .sound{
+    font
+} */
