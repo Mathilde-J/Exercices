@@ -33,6 +33,8 @@
 // // console.log(compareTriplets(a,b))
 // compareTriplets(a,b);
 
+
+
 // EXO 3------------------------------------
 
 // let ar =[1000000001,1000000002,1000000003,1000000004,1000000005];
@@ -275,4 +277,62 @@
 //         n=reduce(operator.mul,[int(x) for x in str(n)],1)
 //         i+=1
 //     return i
+
+// EXO 12-------------------------------
+
+// function solution(number){
+//   // convert the number to a roman numeral
+//     let romanDictionary = {
+//         M:1000,
+//         CM:900,
+//         D:500,
+//         CD:400,
+//         C:100,
+//         XC:90,
+//         L:50,
+//         XL:40,
+//         X:10,
+//         IX:9,
+//         V:5,
+//         IV:4,
+//         I:1
+//     }
+//     let romanNumber = "";
+//     for(let i in romanDictionary){
+//         while (number >= romanDictionary[i]){
+//         romanNumber += i;
+//         number -= romanDictionary[i];
+//         }
+//     }
+//     return romanNumber;
+// }
+
+// Autre solutions:
+// function solution(number){
+//     // convert the number to a roman numeral
+//   var  roman = {M:1000,CM:900, D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1 }
+
+//   var ans = '';
+//   while(number>0){
+//       for(a in roman){
+//           if(roman[a]<=number){ ans += a; number-=roman[a]; break;}
+
+//       }
+//   }
+//   return ans;
+//   }
+
+
+// EXO 13 ------------------------------
+
+// function descendingOrder(num){
+//     let numToString = String(num).split('').map(Number);
+//     return parseInt(numToString.sort((a, b) => b - a).join(''));
+// }
+
+// Autre solution :
+
+// function descendingOrder(n){
+//     return parseInt(String(n).split('').sort().reverse().join(''))
+// }
 
